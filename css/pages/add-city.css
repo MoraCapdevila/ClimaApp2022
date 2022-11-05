@@ -1,0 +1,34 @@
+#add-city-submit{
+    background-color: var(--color-theme);
+    color: white;
+    width: 84px;
+    height: 39px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+section form#form-add-city{
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+
+input#add-city{
+    width: 216px;
+    height: 40px;
+    border-radius: 6px;
+    border: solid 1px;
+}
+
+section#section-weather-result{
+    display: grid;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+section#section-weather-result p{
+    margin-top: 30px;
+}
+

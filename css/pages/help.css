@@ -1,0 +1,72 @@
+main section form{
+    display: flex;
+    flex-direction: column;
+}
+
+main section form input#name{
+    width: 300px;
+}
+
+main section button{
+    background-color: var(--color-theme);
+    color: white;
+    width: 84px;
+    height: 39px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 15px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+main section #button{
+    background-color: var(--color-theme);
+    color: white;
+    width: 84px;
+    height: 39px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    margin-top: 15px;
+
+}
+
+main section form div#butons{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.input-class{
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+main section form input#name{
+    height: 37px;
+}
+
+main section form input#email {
+    height: 37px;
+}
+
+main p#none-valid{
+    color: white;
+    background-color: #DC3444;
+    margin: 50px;
+    padding: 10px;
+    width: 380px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+main div#mesages-container{
+    display: flex;
+    justify-content: center
+}
+
+#butons{
+    display: flex;
+    flex-direction: row-reverse;
+}
