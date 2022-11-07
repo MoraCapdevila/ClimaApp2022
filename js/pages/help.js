@@ -1,3 +1,4 @@
+//se crean las variables
 let inputEmail = document.getElementById("email");
 const btnLimpiar = document.getElementById("clear");
 const inputSumbit = document.getElementById("button");
@@ -5,7 +6,7 @@ const mailExitoso = document.getElementById("mensaje-exitoso");
 const btn = document.getElementById('button');
 const mailInvalido = document.getElementById("none-valid");
 
-
+//se saca la card
 function sacarCartel(){
     mailExitoso.removeAttribute("style");
     mailExitoso.setAttribute("style", "display: none");
@@ -13,6 +14,7 @@ function sacarCartel(){
     mailInvalido.setAttribute("style", "display: none");   
 }
 
+//se valida el mail
 function validMail(){
     // expreción regular para la validación del Email (sacada de internet)
     var regExprecion = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
@@ -29,10 +31,10 @@ function validMail(){
     }
 }
 
+//se ejecutan
 inputSumbit.addEventListener("click", validMail);
 btnLimpiar.addEventListener("click", sacarCartel);
 
-// funcion para enviar mail sacada de JSFiddle
 document.getElementById('form')
 .addEventListener('submit', function (event) {
   event.preventDefault();

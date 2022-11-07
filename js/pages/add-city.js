@@ -1,3 +1,4 @@
+//se crean las variables
 let newCity = ' ';
 const cartelVerde = document.querySelector(".mensaje.green")
 const cartelRojo = document.querySelector(".mensaje.red")
@@ -5,7 +6,7 @@ const cartelAmarillo = document.querySelector(".mensaje.yellow")
 const loading = document.getElementById("div-carga");
 const btnAgregar = document.getElementById("add-city-submit");
 
-
+//se crea la funcion de cargar con exito
 function exito() {
     loading.removeAttribute("style");
     loading.setAttribute("style", "display: none");        
@@ -17,6 +18,7 @@ function exito() {
     cartelVerde.setAttribute("style", "display: flex");
 }
 
+//se crea la funcion que valida si esa ciudad ya esta cargada
 function existente(){
     loading.removeAttribute("style");
     loading.setAttribute("style", "display: none"); 
@@ -28,6 +30,7 @@ function existente(){
     cartelAmarillo.setAttribute("style", "display: flex");
 }
 
+//se crea la funcion que valida que sea una ciudad
 function error(){
     loading.removeAttribute("style");
     loading.setAttribute("style", "display: none"); 
@@ -39,6 +42,7 @@ function error(){
     cartelRojo.setAttribute("style", "display: flex");
 }
 
+//se crea la funcion que guarda la ciudad en el localStorage
 function addNewCityToLocalStorage() {
     let ciudad = document.getElementById("add-city").value;
     // registra la ciudad con mayusculas gracias a .toUpperCase() y sin espacios al final o adelante gracias a .trimp() 
@@ -62,7 +66,7 @@ function addNewCityToLocalStorage() {
                     console.log(newCity + ' Ya existe dentro del array de CITIES del localStorage');
                     existente();
                 } else {
-                    console.log("Huvo un error al añadir la nueva ciudad");
+                    console.log("Hubo un error al añadir la nueva ciudad");
                     error();
                 }            
             } else if (codigo == 404){
@@ -80,5 +84,5 @@ function addNewCityToLocalStorage() {
     }
 }
 
-
+//se muestra
 btnAgregar.addEventListener("click", addNewCityToLocalStorage); 

@@ -1,6 +1,8 @@
+//se crean las variables
 const btnConsultar = document.getElementById("submit");
 const selctCities = document.getElementById("city-list");
 
+//se crea la funcion para guardar las ciudades en el localStorage
 function getCitiesFromLocalStorage() {
     let cities = localStorage.getItem("CITIES");
     if (cities) {
@@ -11,6 +13,7 @@ function getCitiesFromLocalStorage() {
     return cities;
 }
 
+//se crea la funcion para mostrar las ciudades en el localStorage
 function showCitiesSelect() {
     let cities = getCitiesFromLocalStorage();
     for (let i = 0; i < cities.length; i++) {
@@ -21,8 +24,10 @@ function showCitiesSelect() {
     }
 }
 
+//se ejecuta la funcion
 showCitiesSelect();
 
+//se crea la funcion para alert si no hay ciudades guardadas
 function showAlert() {
     const cartelAmarillo = document.getElementById("alert-no-cities");
     let cities = getCitiesFromLocalStorage();
@@ -33,7 +38,7 @@ function showAlert() {
     }
 }
 
-
+//se crean las variables
 const titleCity = document.getElementById("city-title");
 const climaImagen = document.getElementById("img-clima");
 const carta = document.getElementById("carta-clima");
@@ -46,6 +51,7 @@ let humedad;
 let velocidadDelViento;
 let presion;
 
+//se crea la funcion que conecta con la API de openWeather
 function fetchAPI() {
     loading.removeAttribute("style");
     loading.setAttribute("style", "display: block");
@@ -61,6 +67,7 @@ function fetchAPI() {
     .catch(error => alert("La API no funcionó"))
 }
 
+//se crea la funcion que muestra la card de los datos de OpenWeather
 function createCard(datos){
     // City title 
     let name = datos['name'];
@@ -111,6 +118,7 @@ function createCard(datos){
     carta.setAttribute("style", "display: block");
 }
 
+//se crea la funcion para borrar la card anterior
 function removesChildsCard() {
     let pTemp = document.getElementById("temperatura");
     let pFeelsLike = document.getElementById("sensacion_termica");
@@ -126,6 +134,6 @@ function removesChildsCard() {
     }
 }
 
-
+//se ejecutan
 btnConsultar.addEventListener("click", fetchAPI);
 selctCities.addEventListener("click", showAlert);

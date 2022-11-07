@@ -7,3 +7,4 @@ function getCitiesFromLocalStorage() {
     } 
     return cities; 
 }
+//para cargar las cities
