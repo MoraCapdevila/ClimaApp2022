@@ -36,17 +36,18 @@ inputSumbit.addEventListener("click", validMail);
 btnLimpiar.addEventListener("click", sacarCartel);
 
 document.getElementById('form')
-.addEventListener('submit', function (event) {
-  event.preventDefault();
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
 
-  btn.value = 'Enviando...';
+   btn.value = 'Enviando...';
 
-  const serviceID = 'default_service';
-  const templateID = 'template_k0o1xay';
+   const serviceID = 'default_service';
+   const templateID = 'template_9wm8mxg';
 
-  emailjs.sendForm(serviceID, templateID, this)
+   emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Enviar';
+      alert('Mensaje enviado con exito');
       mailInvalido.removeAttribute("style");
       mailInvalido.setAttribute("style", "display: none");     
       mailExitoso.removeAttribute("style");
